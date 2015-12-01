@@ -18,35 +18,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* @end */
@@ -54,52 +54,81 @@ table {
 /* @group Global */
 
 body {
-	background: #f5f5f5;
-	color: #474747;
-	font: 12px/1.6 "Helvetica Neue", HelveticaNeue, sans-serif;
+  background: #253b45 url(../img/shurfing-bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #ddd;
+  font: 18px/1.4 "Helvetica Neue", HelveticaNeue, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 a {
-	color: #4796d6;
-	text-decoration: none;
+  color: #4796d6;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 p {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 strong {
-	font-weight: bold;
+  font-weight: 500;
+}
+
+small {
+  font-size: 14px;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .center {
-	margin: 0 auto;
-	position: relative;
-	width: 978px;
+  /*margin: 0 auto;
+  position: relative;
+  width: 720px;*/
+  max-width: 720px;
+}
+
+.vert-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
 }
 
 .rounded {
-	border-radius: 3px;
+  border-radius: 3px;
 }
 
 .shadowy {
-	box-shadow: 0px 1px 1px rgba(0,0,0,.24);
+  box-shadow: 0 1px 1px rgba(0,0,0,.24);
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 .small {
-	font-size: 11px;
+  font-size: 11px;
 }
 
 /**
@@ -138,7 +167,13 @@ em {
 
 /* @group Content */
 
+img.img-center {
+  margin-top: 20px;
+}
 
+.salutation {
+  line-height: 1;
+}
 
 /* @end */
 
@@ -148,30 +183,88 @@ em {
 
 /* @group Headings */
 
-h1, h2, h3, h4, h5, h6 {
-	color: #363636;
-	font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-weight: 500;
 }
 
 h1 {
-	font-size: 17px;
+  font-family: "PF DinText Pro", "ff-din-web", "Din 1451", Din, "Gill Sans", "Arial Narrow", "Tahoma", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  margin: 20px 0 10px;
+  text-align: center;
 }
 
 h2 {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 h3 {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 h4 {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 /* @end */
 
 /* @group Forms */
 
+.btn {
+  font-weight: 500;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #4faf43;
+}
+
+.btn.btn-lg {
+  border-radius: 5px;
+  display: block;
+  font-size: 22px;
+  margin: 30px auto 0;
+  padding: 15px;
+  text-align: center;
+  width: 224px;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
 
 /* @end */
+
+@media only screen and (max-width : 400px) {
+  .img-center {
+    max-width: 70%;
+    height: auto;
+  }
+ 
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+ .vert-center{
+    padding: 0 20px;
+    position: relative;
+    top: inherit;
+    left: inherit;
+    transform: inherit;
+  }
+
+  .btn.btn-lg {
+    margin-bottom: 20px;
+  }
+}
